@@ -1,4 +1,3 @@
-
 /**
  * @file Navbar.jsx
  * @brief Componente de barra de navegação superior com menus dropdown.
@@ -37,6 +36,10 @@ function Navbar() {
       { label: 'Gerenciar Tarefas', path: '/tasks' },      
       { label: 'Atualizar Tarefa', path: '/tasks/update' },  
     ],
+    // NOVA SECÇÃO: Relatórios adicionados aqui
+    relatorios: [
+      { label: 'Painel de Relatórios', path: '/relatorios' }
+    ]
   };
 
   /** @brief Fecha qualquer menu dropdown que esteja aberto. */
@@ -64,6 +67,7 @@ function Navbar() {
               </div>
             )}
           </li>
+          
           <li className="nav-item" onMouseEnter={() => setActiveMenu('boxes')}>
             <span>Boxes</span>
             {activeMenu === 'boxes' && (
@@ -76,11 +80,25 @@ function Navbar() {
               </div>
             )}
           </li>
+          
           <li className="nav-item" onMouseEnter={() => setActiveMenu('tarefas')}>
             <span>Tarefas (OS)</span>
             {activeMenu === 'tarefas' && (
               <div className="dropdown-menu">
                 {menuItems.tarefas.map((item) => (
+                  <Link key={item.path} to={item.path} className="dropdown-item">
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </li>
+
+          <li className="nav-item" onMouseEnter={() => setActiveMenu('relatorios')}>
+            <span>Relatórios</span>
+            {activeMenu === 'relatorios' && (
+              <div className="dropdown-menu">
+                {menuItems.relatorios.map((item) => (
                   <Link key={item.path} to={item.path} className="dropdown-item">
                     {item.label}
                   </Link>

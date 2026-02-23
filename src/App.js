@@ -23,6 +23,8 @@ import UpdateTasksPage from './pages/tasks/update/UpdateTasksPage';
 
 import GeralPage from './pages/geral/GeralPage';
 
+import ReportsPage from './pages/reports/ReportsPage';
+
 
 import './App.css';
 
@@ -59,6 +61,9 @@ function App() {
             {/* Rotas para o CRUD de Tarefas */}
             <Route path="/tasks" element={<TasksPage />} />
             <Route path="/tasks/update" element={<UpdateTasksPage />} />
+
+            {/* Rota para a página de relatórios*/}
+            <Route path="/relatorios" element={<ReportsPage />} />
           </Routes>
         </main>
       </div>
