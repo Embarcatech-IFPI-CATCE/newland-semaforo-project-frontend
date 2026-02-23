@@ -16,7 +16,7 @@ function ReportsPage() {
 
   const endpoints = {
     productivity: '/reports/technician-productivity',
-    pauses: '/reports/pause-reasons',
+    pauses: '/reports/pause-bottlenecks',
     sla: '/reports/sla'
   };
 
