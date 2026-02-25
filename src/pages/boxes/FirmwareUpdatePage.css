@@ -1,0 +1,181 @@
+/* src/pages/boxes/FirmwareUpdatePage.css */
+
+.ota-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f8fafc;
+  min-height: calc(100vh - 70px);
+}
+
+.ota-card {
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  border: 1px solid #e2e8f0;
+}
+
+.ota-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.ota-icon {
+  font-size: 3rem;
+  color: #3b82f6;
+  margin-bottom: 15px;
+}
+
+.ota-header h2 {
+  color: #0f172a;
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+}
+
+.ota-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ota-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #334155;
+  font-size: 0.9rem;
+}
+
+/* Select Estilizado (reutilizando sua lógica) */
+.custom-select-wrapper select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1e293b;
+  background-color: #f8fafc;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.custom-select-wrapper select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: #fff;
+}
+
+/* Área de Upload de Arquivo */
+.file-drop-area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.file-drop-area:hover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.file-drop-area.has-file {
+  border-color: #22c55e;
+  background-color: #f0fdf4;
+}
+
+.upload-icon {
+  font-size: 2rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+
+.file-drop-area.has-file .upload-icon {
+  color: #22c55e;
+}
+
+.file-message {
+  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Mensagens de Feedback */
+.feedback-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.feedback-message.loading { background-color: #eff6ff; color: #1d4ed8; }
+.feedback-message.success { background-color: #f0fdf4; color: #166534; }
+.feedback-message.error { background-color: #fef2f2; color: #b91c1c; }
+
+.spinner { animation: spin 1s linear infinite; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Botão de Envio */
+.btn-submit-ota {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.btn-submit-ota:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-submit-ota:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}

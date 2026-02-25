@@ -25,6 +25,8 @@ import GeralPage from './pages/geral/GeralPage';
 
 import ReportsPage from './pages/reports/ReportsPage';
 
+import FirmwareUpdatePage from './pages/boxes/FirmwareUpdatePage';
+
 
 import './App.css';
 
@@ -56,7 +58,7 @@ function App() {
 
             {/* Rotas para o CRUD de Boxes */}
             <Route path="/boxes" element={<BoxesPage />} />
-            <Route path="/boxes/update" element={<UpdateBoxesPage />} />
+            <Route path="/boxes/update" element={<FirmwareUpdatePage />} />
 
             {/* Rotas para o CRUD de Tarefas */}
             <Route path="/tasks" element={<TasksPage />} />
@@ -64,6 +66,7 @@ function App() {
 
             {/* Rota para a página de relatórios*/}
             <Route path="/relatorios" element={<ReportsPage />} />
+
           </Routes>
         </main>
       </div>

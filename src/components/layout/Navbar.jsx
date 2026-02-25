@@ -36,7 +36,6 @@ function Navbar() {
       { label: 'Gerenciar Tarefas', path: '/tasks' },      
       { label: 'Atualizar Tarefa', path: '/tasks/update' },  
     ],
-    // NOVA SECÇÃO: Relatórios adicionados aqui
     relatorios: [
       { label: 'Painel de Relatórios', path: '/relatorios' }
     ]
