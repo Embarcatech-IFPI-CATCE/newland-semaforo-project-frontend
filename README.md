@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# 🚦 Workshop Service Monitor - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
-## Available Scripts
+Interface de usuário (Frontend) do **Projeto Semáforo**, um sistema IoT desenvolvido durante a Residência Tecnológica em Sistemas Embarcados (EmbarcaTech) para o **Grupo Newland Toyota**. 
 
-In the project directory, you can run:
+O objetivo desta aplicação é fornecer uma visualização em tempo real do chão de fábrica, permitindo o acompanhamento de Ordens de Serviço (OS), métricas de produtividade dos técnicos e a gestão completa dos boxes da oficina.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Funcionalidades Principais
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **📊 Dashboard em Tempo Real:** Acompanhamento dinâmico do status de cada box (Livre, Ocupado, Em Pausa) e métricas gerais de faturamento e andamento das OS.
+* **👨‍🔧 Visão Operacional do Técnico:** Interface otimizada para o chão de fábrica, permitindo visualizar a tarefa atual e realizar marcações de tempo (Play/Pause) que espelham a interação física com o leitor RFID.
+* **⚙️ Gestão Administrativa (CRUDs):** Telas dedicadas para o cadastro e gerenciamento de Técnicos, Boxes e Catálogo de Tarefas.
+* **☁️ Atualização Remota (OTA):** Módulo avançado para upload de arquivos de firmware (`.bin`), disparando atualizações pela rede para os microcontroladores ESP32 espalhados pela oficina.
+* **🔐 Controle de Acesso:** Sistema de rotas protegidas (Gatekeeper), separando a visão gerencial da visão operacional.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm run build`
+O ecossistema do frontend foi escolhido visando alta reatividade e velocidade de compilação:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* **[React.js](https://reactjs.org/)**: Biblioteca para construção de interfaces de usuário.
+* **[Vite](https://vitejs.dev/)**: Ferramenta de build e servidor de desenvolvimento ultra-rápido.
+* **[React Router Dom](https://reactrouter.com/)**: Gerenciamento das rotas (Single Page Application).
+* **[Axios](https://axios-http.com/)**: Cliente HTTP HTTP para comunicação com a API REST (Spring Boot).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Como Executar o Projeto Localmente
 
-### `npm run eject`
+### Pré-requisitos
+* **Node.js** (versão 18 ou superior)
+* **NPM** ou **Yarn**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Passo a Passo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/EnzoMello/Workshop-service-frontend.git](https://github.com/EnzoMello/Workshop-service-frontend.git)
