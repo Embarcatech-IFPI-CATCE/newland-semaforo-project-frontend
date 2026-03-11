@@ -42,3 +42,19 @@ O ecossistema do frontend foi escolhido visando alta reatividade e velocidade de
 1. **Clone o repositório:**
    ```bash
    git clone [https://github.com/EnzoMello/Workshop-service-frontend.git](https://github.com/EnzoMello/Workshop-service-frontend.git)
+   ```
+
+2. **Acesse a pasta do projeto:**
+```bash
+   cd Workshop-service-frontend
+```
+
+3. **Instale as dependências:**
+```bash
+   npm install
+```
+
+4. **Inicie o servidor de desenvolvimento**
+```bash
+   npm run dev
+```
